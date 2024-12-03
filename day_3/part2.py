@@ -7,12 +7,8 @@ def parse(instruct) -> list[int]:
     return [int(number) for number in instruct[4:len(instruct)-1].split(',')]
 
 import re
-regex = r'(mul\(\d{1,3},\d{1,3}\))|(do\(\)|don\'t\(\))'
-valids = re.findall(regex, data)
-
-# Extract capturing group
-instructs = [group[0] if group[0] else group[1] 
-             for group in valids]
+regex = r'mul\(\d{1,3},\d{1,3}\)|do\(\)|don\'t\(\)'
+instructs = re.findall(regex, data)
 l = len(instructs)
 result = 0
 i = 0

@@ -1,7 +1,8 @@
 from pathlib import Path
 
-# Define the folder and file names
-day = 
+# Auto update day
+day = sum(1 for folder in Path('.').iterdir() 
+          if folder.is_dir() and folder.name.startswith('day_')) + 1
 folder_name = f'day_{day}'
 files = ['input.txt', 'part1.py', 'part2.py']
 

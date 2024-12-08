@@ -5,7 +5,7 @@ data = [[c for c in line] for line in data.splitlines()]
 h, w = len(data), len(data[0])
 
 def in_map(x, y):
-    """Check if the point is in map"""
+    """Check if the position is in map"""
     return (0 <= x < w) and (0 <= y < h)
 
 def count_anitodes(a, b):
@@ -18,17 +18,22 @@ def count_anitodes(a, b):
 
     if x_a < x_b:
         x = x_b + dx
-        if y_a < y_b:   y = y_b - dy
-        elif y_a > y_b: y = y_b + dy
+        if y_a < y_b:   y = y_b + dy
+        elif y_a > y_b: y = y_b - dy
     elif x_a > x_b:
         x = x_b - dx
         if y_a < y_b:   y = y_b + dy
         elif y_a > y_b: y = y_b - dy
 
-    if in_map(x, y) and data[x][y] == '.':
+    if not in_map(x, y):
+        return 0
+
+    if data[x][y] == '.':
         data[x][y] = '#'  # add anitode to the map
         return 1
-
+    else:
+        if data[x][y] != '#':  # the position is antenna
+            return 1 
     return 0
 
 def check(positions):

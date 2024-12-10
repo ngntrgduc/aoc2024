@@ -15,4 +15,4 @@ for file_name in files:
     file_path = folder_path / file_name
     file_path.touch()  # Create the empty file
 
-print('Created successfully')
+print(f'Created day {day} successfully')

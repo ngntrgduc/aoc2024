@@ -16,19 +16,13 @@ def count_scores(x, y) -> int:
             return 1
         else:
             return 0
-
-    # up
-    if in_map(x, y - 1) and data[x][y - 1] == current + 1:
-        count += count_scores(x, y - 1)
-    # down
-    if in_map(x, y + 1) and data[x][y + 1] == current + 1:
-        count += count_scores(x, y + 1)
-    # left
-    if in_map(x - 1, y) and data[x - 1][y] == current + 1:
-        count += count_scores(x - 1, y)
-    # right
-    if in_map(x + 1, y) and data[x + 1][y] == current + 1:
-        count += count_scores(x + 1, y)
+    
+    #               up      down     left    right  
+    directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
+    for direction in directions:
+        new_x, new_y = x + direction[0], y + direction[1]
+        if in_map(new_x, new_y) and data[new_x][new_y] == current + 1:
+            count += count_scores(new_x, new_y)
 
     return count
 

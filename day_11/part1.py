@@ -23,18 +23,10 @@ def blink(stones):
 
         result.append(str(int(stone) * 2024))
 
-    print(result)
     return result
 
-data.split(' ')
-# data = '0 1 10 99 999'
-data = '125 17'
-data = '0'
-data = '2'
-
 stones = data.split(' ')
-for i in range(15):
-    print(i, end=' - ')
+for i in range(25):
     stones = blink(stones)
 
 print(len(stones))

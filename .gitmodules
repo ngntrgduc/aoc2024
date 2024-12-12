@@ -1,0 +1,3 @@
+[submodule "markdown-calendar"]
+	path = markdown-calendar
+	url = https://github.com/ngntrgduc/markdown-calendar.git

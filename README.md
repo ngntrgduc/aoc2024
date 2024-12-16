@@ -8,8 +8,9 @@
 |[23](/day_23/)|[24](/day_24/)|[25](/day_25/)|26|27|28|29|
 |30|31|1|2|3|4|5|
 
-My take on https://adventofcode.com/2024. I played this in the month before my final, so there were days I didn't finish (or due to my skill issues, for sure).
+My take on [Advent of Code 2024](https://adventofcode.com/2024). I played this in the month before my final, so there were days I didn't finish (or due to my skill issues, for sure).
 
+Update on day 16: I was tired of 2D-array problems + lots of deadlines were coming, so I dropped it.
 
 ### Stuff I learned/revisited
 
